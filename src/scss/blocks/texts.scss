@@ -1,1 +1,12 @@
+.text {
+    &--hour {
+        font-size: 8rem;
+        font-weight: 900;
+        margin: 0;
+    }
 
+    &--date {
+        font-size: 2rem;
+        margin: 0;
+    }
+}
