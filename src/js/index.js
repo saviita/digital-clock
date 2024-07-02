@@ -30,7 +30,7 @@ const changeDate = () => {
 
     const degSeconds = date.getUTCSeconds() * 6
     const degMinutes = date.getUTCMinutes() * 6
-    const degHours = date.getHours() * 6
+    const degHours = date.getHours() * 30
     rootStyles.setProperty('--rotate-second', degSeconds + 'deg')
     rootStyles.setProperty('--rotate-minute', degMinutes + 'deg')
     rootStyles.setProperty('--rotate-hour', degHours + 'deg')
