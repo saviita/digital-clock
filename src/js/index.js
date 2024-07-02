@@ -20,13 +20,25 @@ const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 const changeDate = () => {
     const date = new Date()
     
-    hourElement.textContent = date.getHours()
-    minutesElement.textContent = date.getMinutes()
+    console.log(date.getMinutes())
+    if(date.getMinutes().toString().length < 2) {
+        minutesElement.textContent = '0' + date.getMinutes()
+    } else {
+        minutesElement.textContent = date.getMinutes()
+    }
+
+    if(date.getHours().toString().length < 2) {
+        hourElement.textContent = '0' + date.getHours()
+    } else {
+        hourElement.textContent = date.getHours()
+    }
+
+
+
     dayElement.textContent = daysOfWeek[date.getDay() - 1]
     dateElement.textContent = date.getDate()
     monthElement.textContent = months[date.getMonth()]
     yearElement.textContent = date.getFullYear()
-    console.log(date)
 
     const degSeconds = date.getUTCSeconds() * 6
     const degMinutes = date.getUTCMinutes() * 6
